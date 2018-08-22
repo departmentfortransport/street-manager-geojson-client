@@ -29,5 +29,24 @@ class StreetManagerGeoJSONClient {
             }
         });
     }
+    getWorks(boundingBox) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.httpHandler(() => this.axios.get(`/works/${boundingBox}`));
+        });
+    }
+    httpHandler(request) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let response = yield request();
+                if (response.data) {
+                    return response.data;
+                }
+            }
+            catch (err) {
+                err.status = err.response.status;
+                return Promise.reject(err);
+            }
+        });
+    }
 }
 exports.StreetManagerGeoJSONClient = StreetManagerGeoJSONClient;
