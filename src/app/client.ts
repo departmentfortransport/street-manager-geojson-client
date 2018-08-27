@@ -25,8 +25,8 @@ export class StreetManagerGeoJSONClient {
     }
   }
 
-  public async getWorks(boundingBox: string) {
-    return this.httpHandler<WorkResponse>(() => this.axios.get(`/works/${boundingBox}`))
+  public async getWorks(boundingBox: string): Promise<WorkResponse[]> {
+    return this.httpHandler<WorkResponse[]>(() => this.axios.get(`/works/${boundingBox}`))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
