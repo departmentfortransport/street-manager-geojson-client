@@ -6,5 +6,6 @@ export interface WorkResponse {
     work_category: WorkCategory
     start_date: Date
     end_date: Date
-    traffic_management_type: TrafficManagementType
+    traffic_management_type: TrafficManagementType,
+    works_coordinates: any
 }
