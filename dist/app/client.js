@@ -29,9 +29,10 @@ class StreetManagerGeoJSONClient {
             }
         });
     }
-    getWorks(boundingBox) {
+    getWorks(minEasting, minNorthing, maxEasting, maxNorthing) {
         return __awaiter(this, void 0, void 0, function* () {
-            return this.httpHandler(() => this.axios.get(`/works/${boundingBox}`));
+            let config = { params: { minEasting: minEasting, minNorthing: minNorthing, maxEasting: maxEasting, maxNorthing: maxNorthing } };
+            return this.httpHandler(() => this.axios.get(`/works`, config));
         });
     }
     httpHandler(request) {

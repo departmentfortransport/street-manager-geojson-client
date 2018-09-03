@@ -7,5 +7,5 @@ export interface WorkResponse {
     start_date: Date;
     end_date: Date;
     traffic_management_type: TrafficManagementType;
-    works_coordinates: any;
+    work_centre_point: any;
 }
