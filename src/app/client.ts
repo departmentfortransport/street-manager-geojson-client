@@ -1,5 +1,4 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
-import { OK } from 'http-status-codes'
 import { WorkResponse } from '../interfaces/workResponse'
 import { RequestConfig } from '../interfaces/requestConfig'
 
@@ -17,13 +16,8 @@ export class StreetManagerGeoJSONClient {
     })
   }
 
-  public async isAvailable(): Promise<boolean> {
-    try {
-      let response: AxiosResponse = await this.axios.get('/status')
-      return response.status === OK
-    } catch (err) {
-      return false
-    }
+  public async status(): Promise<void> {
+    return this.httpHandler<void>(() => this.axios.get('/status'))
   }
 
   public async getWorks(requestConfig: RequestConfig, minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]> {
@@ -46,7 +40,9 @@ export class StreetManagerGeoJSONClient {
         return response.data
       }
     } catch (err) {
-      err.status = err.response.status
+      if (err && err.response && err.response.status) {
+        err.status = err.response.status
+      }
       return Promise.reject(err)
     }
   }
