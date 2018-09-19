@@ -1,9 +1,15 @@
-export declare enum WorkCategory {
-    minor = "minor",
-    standard = "standard",
-    major = "major",
-    immediate_urgent = "immediate_urgent",
-    immediate_emergency = "immediate_emergency"
+export declare enum PermitStatus {
+    submitted = "submitted",
+    granted_proposed = "granted_proposed",
+    granted_with_changes = "granted_with_changes",
+    refused = "refused",
+    granted_in_progress = "granted_in_progress",
+    closed = "closed",
+    cancelled = "cancelled",
+    revoked_proposed = "revoked_proposed",
+    revoked_in_progress = "revoked_in_progress",
+    deemed_proposed = "deemed_proposed",
+    deemed_in_progress = "deemed_in_progress"
 }
 export declare enum TrafficManagementType {
     road_closure = "road_closure",
@@ -17,4 +23,11 @@ export declare enum TrafficManagementType {
     give_and_take = "give_and_take",
     some_carriageway_incursion = "some_carriageway_incursion",
     no_carriageway_incursion = "no_carriageway_incursion"
+}
+export declare enum WorkCategory {
+    minor = "minor",
+    standard = "standard",
+    major = "major",
+    immediate_urgent = "immediate_urgent",
+    immediate_emergency = "immediate_emergency"
 }
