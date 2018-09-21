@@ -1,4 +1,4 @@
-import { WorkCategory, TrafficManagementType } from './referenceTypes';
+import { WorkCategory, TrafficManagementType, PermitStatus } from './referenceTypes';
 export interface WorkResponse {
     reference_number: string;
     promoter_organisation: string;
@@ -8,4 +8,5 @@ export interface WorkResponse {
     end_date: Date;
     traffic_management_type: TrafficManagementType;
     work_centre_point: any;
+    permit_status: PermitStatus;
 }
