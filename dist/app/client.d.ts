@@ -8,6 +8,7 @@ export declare class StreetManagerGeoJSONClient {
     private axios;
     constructor(config: StreetManagerGeoJSONClientConfig);
     isAvailable(): Promise<boolean>;
-    getWorks(minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]>;
+    getWorks(requestId: string, minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]>;
     private httpHandler;
+    private generateRequestConfig;
 }
