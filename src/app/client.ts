@@ -25,8 +25,8 @@ export class StreetManagerGeoJSONClient {
     }
   }
 
-  public async getWorks(minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]> {
-    let config: AxiosRequestConfig = { params: { minEasting: minEasting, minNorthing: minNorthing, maxEasting: maxEasting, maxNorthing: maxNorthing } }
+  public async getWorks(requestId: string, minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]> {
+    let config: AxiosRequestConfig = this.generateRequestConfig(requestId, { minEasting: minEasting, minNorthing: minNorthing, maxEasting: maxEasting, maxNorthing: maxNorthing })
     return this.httpHandler<WorkResponse[]>(() => this.axios.get(`/works`, config))
   }
 
@@ -40,5 +40,11 @@ export class StreetManagerGeoJSONClient {
       err.status = err.response.status
       return Promise.reject(err)
     }
+  }
+
+  private generateRequestConfig(requestId, params): AxiosRequestConfig {
+    let headers = {}
+    headers['request-id'] = requestId
+    return { headers: headers, params: params }
   }
 }
