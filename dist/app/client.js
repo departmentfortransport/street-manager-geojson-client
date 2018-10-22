@@ -29,9 +29,15 @@ class StreetManagerGeoJSONClient {
             }
         });
     }
-    getWorks(requestId, minEasting, minNorthing, maxEasting, maxNorthing) {
+    getWorks(requestConfig, minEasting, minNorthing, maxEasting, maxNorthing) {
         return __awaiter(this, void 0, void 0, function* () {
-            let config = this.generateRequestConfig(requestId, { minEasting: minEasting, minNorthing: minNorthing, maxEasting: maxEasting, maxNorthing: maxNorthing });
+            let config = this.generateRequestConfig(requestConfig);
+            config.params = {
+                minEasting: minEasting,
+                minNorthing: minNorthing,
+                maxEasting: maxEasting,
+                maxNorthing: maxNorthing
+            };
             return this.httpHandler(() => this.axios.get(`/works`, config));
         });
     }
@@ -49,10 +55,13 @@ class StreetManagerGeoJSONClient {
             }
         });
     }
-    generateRequestConfig(requestId, params) {
+    generateRequestConfig(config) {
         let headers = {};
-        headers['x-request-id'] = requestId;
-        return { headers: headers, params: params };
+        if (config.token) {
+            headers['token'] = config.token;
+        }
+        headers['request-id'] = config.requestId;
+        return { headers: headers, params: {} };
     }
 }
 exports.StreetManagerGeoJSONClient = StreetManagerGeoJSONClient;
