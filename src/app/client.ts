@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
+import { GetWorksRequest } from '../interfaces/getWorksRequest'
 import { WorkResponse } from '../interfaces/workResponse'
 import { RequestConfig } from '../interfaces/requestConfig'
 
@@ -20,15 +21,10 @@ export class StreetManagerGeoJSONClient {
     return this.httpHandler<void>(() => this.axios.get('/status'))
   }
 
-  public async getWorks(requestConfig: RequestConfig, minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]> {
+  public async getWorks(requestConfig: RequestConfig, getWorksRequest: GetWorksRequest): Promise<WorkResponse[]> {
     let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
 
-    config.params = {
-      minEasting: minEasting,
-      minNorthing: minNorthing,
-      maxEasting: maxEasting,
-      maxNorthing: maxNorthing
-    }
+    config.params = getWorksRequest
 
     return this.httpHandler<WorkResponse[]>(() => this.axios.get(`/works`, config))
   }

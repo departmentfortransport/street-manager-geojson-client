@@ -1,3 +1,4 @@
+import { GetWorksRequest } from '../interfaces/getWorksRequest';
 import { WorkResponse } from '../interfaces/workResponse';
 import { RequestConfig } from '../interfaces/requestConfig';
 export interface StreetManagerGeoJSONClientConfig {
@@ -9,8 +10,7 @@ export declare class StreetManagerGeoJSONClient {
     private axios;
     constructor(config: StreetManagerGeoJSONClientConfig);
     status(): Promise<void>;
-    getWorks(requestConfig: RequestConfig, minEasting: number, minNorthing: number, maxEasting: number, maxNorthing: number): Promise<WorkResponse[]>;
-
+    getWorks(requestConfig: RequestConfig, getWorksRequest: GetWorksRequest): Promise<WorkResponse[]>;
     private httpHandler;
     private generateRequestConfig;
 }

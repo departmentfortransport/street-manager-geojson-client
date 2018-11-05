@@ -22,15 +22,10 @@ class StreetManagerGeoJSONClient {
             return this.httpHandler(() => this.axios.get('/status'));
         });
     }
-    getWorks(requestConfig, minEasting, minNorthing, maxEasting, maxNorthing) {
+    getWorks(requestConfig, getWorksRequest) {
         return __awaiter(this, void 0, void 0, function* () {
             let config = this.generateRequestConfig(requestConfig);
-            config.params = {
-                minEasting: minEasting,
-                minNorthing: minNorthing,
-                maxEasting: maxEasting,
-                maxNorthing: maxNorthing
-            };
+            config.params = getWorksRequest;
             return this.httpHandler(() => this.axios.get(`/works`, config));
         });
     }
