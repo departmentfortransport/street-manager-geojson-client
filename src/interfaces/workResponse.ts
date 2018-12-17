@@ -1,6 +1,7 @@
 import { WorkCategory, TrafficManagementType, PermitStatus } from './referenceTypes'
 export interface WorkResponse {
   work_reference_number: string
+  permit_reference_number: string
   promoter_organisation: string
   promoter_swa_code: string
   work_category: WorkCategory
