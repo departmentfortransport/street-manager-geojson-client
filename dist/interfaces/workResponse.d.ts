@@ -8,6 +8,7 @@ export interface WorkResponse {
     start_date: Date;
     end_date: Date;
     traffic_management_type: TrafficManagementType;
-    work_centre_point: any;
+    work_centre_point: string;
+    work_coordinates: string;
     permit_status: PermitStatus;
 }
