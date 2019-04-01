@@ -1,4 +1,5 @@
 import { WorkCategory, TrafficManagementType, PermitStatus } from './referenceTypes'
+
 export interface WorkResponse {
   work_reference_number: string
   permit_reference_number: string
@@ -7,7 +8,8 @@ export interface WorkResponse {
   work_category: WorkCategory
   start_date: Date
   end_date: Date
-  traffic_management_type: TrafficManagementType,
-  work_centre_point: any
+  traffic_management_type: TrafficManagementType
+  work_centre_point: string // JSON string
+  work_coordinates: string // JSON string
   permit_status: PermitStatus
 }

@@ -4,10 +4,7 @@ Please explain briefly the changes you made here.
 
 ## Checklist
 
-- [ ] All tests passing (Unit / Integration / Automated UI)
-- [ ] Code coverage suitable
-- [ ] Pa11y passing
-- [ ] WAVE toolbar run on new or updated screens
+- [ ] All tests passing (Unit / Integration / Automated UI / Performance)
 - [ ] Branch named {feature|hotfix|task}/{SM-.*}
 - [ ] If your pull request depends on any other, please link them
 - [ ] Quality Street approval
