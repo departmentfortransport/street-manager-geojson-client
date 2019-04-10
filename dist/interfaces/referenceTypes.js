@@ -17,6 +17,7 @@ var PermitStatus;
     PermitStatus["refused_auto"] = "refused_auto";
     PermitStatus["cancelled_auto"] = "cancelled_auto";
     PermitStatus["awaiting_assessment_in_progress"] = "awaiting_assessment_in_progress";
+    PermitStatus["revoked_closed"] = "revoked_closed";
 })(PermitStatus = exports.PermitStatus || (exports.PermitStatus = {}));
 var TrafficManagementType;
 (function (TrafficManagementType) {
