@@ -5,4 +5,5 @@ export interface GetWorksRequest {
   maxNorthing: number
   start_date?: Date
   end_date?: Date
+  work_reference_number?: string
 }
