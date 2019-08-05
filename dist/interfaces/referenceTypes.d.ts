@@ -37,3 +37,14 @@ export declare enum WorkCategory {
     immediate_emergency = "immediate_emergency",
     paa = "paa"
 }
+export declare enum ActivityActivityType {
+    skips = "skips",
+    scaffolding = "scaffolding",
+    hoarding = "hoarding",
+    crane_mobile_platform = "crane_mobile_platform",
+    event = "event",
+    section50 = "section50",
+    section58 = "section58",
+    compound = "compound",
+    other = "other"
+}

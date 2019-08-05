@@ -1,7 +1,9 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
 import { GetWorksRequest } from '../interfaces/getWorksRequest'
+import { GetActivitiesRequest } from '../interfaces/getActivitiesRequest'
 import { WorkResponse } from '../interfaces/workResponse'
 import { RequestConfig } from '../interfaces/requestConfig'
+import { ActivityResponse } from '../interfaces/activitiesResponse'
 
 export interface StreetManagerGeoJSONClientConfig {
   baseURL: string,
@@ -27,6 +29,14 @@ export class StreetManagerGeoJSONClient {
     config.params = getWorksRequest
 
     return this.httpHandler<WorkResponse[]>(() => this.axios.get(`/works`, config))
+  }
+
+  public async getActivities(requestConfig: RequestConfig, getActivitiesRequest: GetActivitiesRequest): Promise<ActivityResponse[]> {
+    let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
+
+    config.params = getActivitiesRequest
+
+    return this.httpHandler<ActivityResponse[]>(() => this.axios.get(`/activities`, config))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
