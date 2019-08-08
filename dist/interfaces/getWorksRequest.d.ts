@@ -1,9 +1,4 @@
-export interface GetWorksRequest {
-    minEasting: number;
-    minNorthing: number;
-    maxEasting: number;
-    maxNorthing: number;
-    start_date?: Date;
-    end_date?: Date;
+import { GeojsonRequest } from './geojsonRequest';
+export interface GetWorksRequest extends GeojsonRequest {
     work_reference_number?: string;
 }

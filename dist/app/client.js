@@ -29,6 +29,13 @@ class StreetManagerGeoJSONClient {
             return this.httpHandler(() => this.axios.get(`/works`, config));
         });
     }
+    getActivities(requestConfig, getActivitiesRequest) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let config = this.generateRequestConfig(requestConfig);
+            config.params = getActivitiesRequest;
+            return this.httpHandler(() => this.axios.get(`/activities`, config));
+        });
+    }
     httpHandler(request) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
