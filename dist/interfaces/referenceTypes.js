@@ -54,3 +54,9 @@ var ActivityActivityType;
     ActivityActivityType["compound"] = "compound";
     ActivityActivityType["other"] = "other";
 })(ActivityActivityType = exports.ActivityActivityType || (exports.ActivityActivityType = {}));
+var ForwardPlanStatus;
+(function (ForwardPlanStatus) {
+    ForwardPlanStatus["raised"] = "raised";
+    ForwardPlanStatus["cancelled"] = "cancelled";
+    ForwardPlanStatus["closed"] = "closed";
+})(ForwardPlanStatus = exports.ForwardPlanStatus || (exports.ForwardPlanStatus = {}));
