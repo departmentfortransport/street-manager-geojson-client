@@ -54,3 +54,15 @@ var ActivityActivityType;
     ActivityActivityType["compound"] = "compound";
     ActivityActivityType["other"] = "other";
 })(ActivityActivityType = exports.ActivityActivityType || (exports.ActivityActivityType = {}));
+var ForwardPlanStatus;
+(function (ForwardPlanStatus) {
+    ForwardPlanStatus["raised"] = "raised";
+    ForwardPlanStatus["cancelled"] = "cancelled";
+    ForwardPlanStatus["closed"] = "closed";
+})(ForwardPlanStatus = exports.ForwardPlanStatus || (exports.ForwardPlanStatus = {}));
+var RefForwardPlanStatus;
+(function (RefForwardPlanStatus) {
+    RefForwardPlanStatus[RefForwardPlanStatus["raised"] = 1] = "raised";
+    RefForwardPlanStatus[RefForwardPlanStatus["cancelled"] = 2] = "cancelled";
+    RefForwardPlanStatus[RefForwardPlanStatus["closed"] = 3] = "closed";
+})(RefForwardPlanStatus = exports.RefForwardPlanStatus || (exports.RefForwardPlanStatus = {}));
