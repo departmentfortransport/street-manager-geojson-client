@@ -4,6 +4,8 @@ import { GetActivitiesRequest } from '../interfaces/getActivitiesRequest'
 import { WorkResponse } from '../interfaces/workResponse'
 import { RequestConfig } from '../interfaces/requestConfig'
 import { ActivityResponse } from '../interfaces/activitiesResponse'
+import { ForwardPlanResponse } from '../interfaces/forwardPlanResponse'
+import { GetForwardPlanRequest } from '../interfaces/getForwardPlanRequest'
 
 export interface StreetManagerGeoJSONClientConfig {
   baseURL: string,
@@ -37,6 +39,14 @@ export class StreetManagerGeoJSONClient {
     config.params = getActivitiesRequest
 
     return this.httpHandler<ActivityResponse[]>(() => this.axios.get(`/activities`, config))
+  }
+
+  public async getForwardPlans(requestConfig: RequestConfig, getForwardPlansRequest: GetForwardPlanRequest): Promise<ForwardPlanResponse[]> {
+    let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
+
+    config.params = getForwardPlansRequest
+
+    return this.httpHandler<ForwardPlanResponse[]>(() => this.axios.get(`/forward-plans`, config))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
