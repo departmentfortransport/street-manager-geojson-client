@@ -58,6 +58,11 @@ export class StreetManagerGeoJSONClient {
     if (config.token) {
       headers['token'] = config.token
     }
+
+    if (config.frontendToken) {
+      headers['frontendToken'] = config.frontendToken
+    }
+
     headers['request-id'] = config.requestId
     return { headers: headers, params: {} }
   }
