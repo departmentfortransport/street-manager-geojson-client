@@ -36,6 +36,13 @@ class StreetManagerGeoJSONClient {
             return this.httpHandler(() => this.axios.get(`/activities`, config));
         });
     }
+    getForwardPlans(requestConfig, getForwardPlansRequest) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let config = this.generateRequestConfig(requestConfig);
+            config.params = getForwardPlansRequest;
+            return this.httpHandler(() => this.axios.get(`/forward-plans`, config));
+        });
+    }
     httpHandler(request) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

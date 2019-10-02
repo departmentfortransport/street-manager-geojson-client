@@ -51,3 +51,15 @@ export enum ActivityActivityType {
   compound = 'compound',
   other = 'other'
 }
+
+export enum ForwardPlanStatus {
+  raised = 'raised',
+  cancelled = 'cancelled',
+  closed = 'closed'
+}
+
+export enum RefForwardPlanStatus {
+  raised = 1,
+  cancelled = 2,
+  closed = 3
+}
