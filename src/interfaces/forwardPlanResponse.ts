@@ -11,4 +11,6 @@ export interface ForwardPlanResponse {
   start_date: Date
   end_date: Date
   description_of_work: string
+  promoter_organisation: string
+  location_description: string
 }
