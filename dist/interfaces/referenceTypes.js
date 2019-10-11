@@ -4,7 +4,7 @@ var PermitStatus;
 (function (PermitStatus) {
     PermitStatus["submitted"] = "submitted";
     PermitStatus["granted_proposed"] = "granted_proposed";
-    PermitStatus["granted_with_changes"] = "granted_with_changes";
+    PermitStatus["permit_modification_request"] = "Permit modification request";
     PermitStatus["refused"] = "refused";
     PermitStatus["granted_in_progress"] = "granted_in_progress";
     PermitStatus["closed"] = "closed";
@@ -18,6 +18,7 @@ var PermitStatus;
     PermitStatus["cancelled_auto"] = "cancelled_auto";
     PermitStatus["awaiting_assessment_in_progress"] = "awaiting_assessment_in_progress";
     PermitStatus["revoked_closed"] = "revoked_closed";
+    PermitStatus["deemed_closed"] = "deemed_closed";
 })(PermitStatus = exports.PermitStatus || (exports.PermitStatus = {}));
 var TrafficManagementType;
 (function (TrafficManagementType) {

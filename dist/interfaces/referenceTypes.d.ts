@@ -1,7 +1,7 @@
 export declare enum PermitStatus {
     submitted = "submitted",
     granted_proposed = "granted_proposed",
-    granted_with_changes = "granted_with_changes",
+    permit_modification_request = "Permit modification request",
     refused = "refused",
     granted_in_progress = "granted_in_progress",
     closed = "closed",
@@ -14,7 +14,8 @@ export declare enum PermitStatus {
     refused_auto = "refused_auto",
     cancelled_auto = "cancelled_auto",
     awaiting_assessment_in_progress = "awaiting_assessment_in_progress",
-    revoked_closed = "revoked_closed"
+    revoked_closed = "revoked_closed",
+    deemed_closed = "deemed_closed"
 }
 export declare enum TrafficManagementType {
     road_closure = "road_closure",
