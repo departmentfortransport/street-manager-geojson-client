@@ -14,9 +14,9 @@ export declare class StreetManagerGeoJSONClient {
     private axios;
     constructor(config: StreetManagerGeoJSONClientConfig);
     status(): Promise<void>;
-    getWorks(requestConfig: RequestConfig, getWorksRequest: GetWorksRequest): Promise<WorkResponse[]>;
-    getActivities(requestConfig: RequestConfig, getActivitiesRequest: GetActivitiesRequest): Promise<ActivityResponse[]>;
-    getForwardPlans(requestConfig: RequestConfig, getForwardPlansRequest: GetForwardPlanRequest): Promise<ForwardPlanResponse[]>;
+    getWorks(requestConfig: RequestConfig, getWorksRequest: GetWorksRequest): Promise<WorkResponse>;
+    getActivities(requestConfig: RequestConfig, getActivitiesRequest: GetActivitiesRequest): Promise<ActivityResponse>;
+    getForwardPlans(requestConfig: RequestConfig, getForwardPlansRequest: GetForwardPlanRequest): Promise<ForwardPlanResponse>;
     private httpHandler;
     private generateRequestConfig;
 }
