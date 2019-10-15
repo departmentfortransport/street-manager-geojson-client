@@ -1,4 +1,5 @@
 export * from './app/client'
+export * from './interfaces/geojsonTypes'
 export * from './interfaces/getWorksRequest'
 export * from './interfaces/workResponse'
 export * from './interfaces/getActivitiesRequest'

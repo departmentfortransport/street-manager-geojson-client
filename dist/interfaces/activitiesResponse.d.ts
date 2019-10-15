@@ -1,7 +1,13 @@
 import { ActivityActivityType } from './referenceTypes';
-export interface ActivityResponse {
-    activity_centre_point: string;
-    activity_coordinates: string;
+import { GeoJSONResponse, GeoJSONFeature, GeoJSONCentrePoint } from './geojsonTypes';
+export interface ActivityResponse extends GeoJSONResponse {
+    features: ActivityFeature[];
+}
+export interface ActivityFeature extends GeoJSONFeature {
+    properties: ActivityProperties;
+}
+export interface ActivityProperties {
+    activity_centre_point: GeoJSONCentrePoint;
     activity_name: string;
     activity_location_description: string;
     activity_reference_number: string;
