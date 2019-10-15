@@ -1,8 +1,12 @@
+export declare type FeatureCollectionType = 'FeatureCollection';
+export declare type FeatureType = 'Feature';
+export declare type GeoJSONCentrePointType = 'Point';
+export declare type GeoJSONCentrePointCoordinates = [number, number];
 export interface GeoJSONResponse {
-    type: 'FeatureCollection';
+    type: FeatureCollectionType;
 }
 export interface GeoJSONFeature {
-    type: 'Feature';
+    type: FeatureType;
     geometry: GeoJSONGeometry;
 }
 export interface GeoJSONGeometry {
@@ -15,6 +19,6 @@ export declare enum GeoJSONFeatureType {
     Polygon = "Polygon"
 }
 export interface GeoJSONCentrePoint {
-    type: GeoJSONFeatureType.Point;
-    coordinates: [number, number];
+    type: GeoJSONCentrePointType;
+    coordinates: GeoJSONCentrePointCoordinates;
 }
