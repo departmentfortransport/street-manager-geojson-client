@@ -18,6 +18,7 @@ export interface WorkProperties {
   start_date: Date
   end_date: Date
   traffic_management_type: TrafficManagementType
+  /** GeoJSON Point Geometry */
   work_centre_point: GeoJSONCentrePoint
   permit_status: PermitStatus
 }

@@ -12,6 +12,7 @@ export interface GeoJSONResponse {
 }
 export interface GeoJSONFeature {
     type: FeatureType;
+    /** GeoJSON Geometry */
     geometry: GeoJSONGeometry;
 }
 export interface GeoJSONGeometry {

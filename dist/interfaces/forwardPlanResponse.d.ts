@@ -10,6 +10,7 @@ export interface ForwardPlanProperties {
     forward_plan_reference_number: string;
     work_reference_number: string;
     forward_plan_status: ForwardPlanStatus;
+    /** GeoJSON Point Geometry */
     work_centre_point: GeoJSONCentrePoint;
     street: string;
     area?: string;

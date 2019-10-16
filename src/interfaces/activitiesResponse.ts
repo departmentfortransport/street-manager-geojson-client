@@ -10,6 +10,7 @@ export interface ActivityFeature extends GeoJSONFeature {
 }
 
 export interface ActivityProperties {
+  /** GeoJSON Point Geometry */
   activity_centre_point: GeoJSONCentrePoint
   activity_name: string
   activity_location_description: string
