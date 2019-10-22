@@ -1,5 +1,12 @@
 import { WorkCategory, TrafficManagementType, PermitStatus } from './referenceTypes';
-export interface WorkResponse {
+import { GeoJSONResponse, GeoJSONFeature, GeoJSONCentrePoint } from './geojsonTypes';
+export interface WorkResponse extends GeoJSONResponse {
+    features: WorkFeature[];
+}
+export interface WorkFeature extends GeoJSONFeature {
+    properties: WorkProperties;
+}
+export interface WorkProperties {
     work_reference_number: string;
     permit_reference_number: string;
     promoter_organisation: string;
@@ -8,7 +15,7 @@ export interface WorkResponse {
     start_date: Date;
     end_date: Date;
     traffic_management_type: TrafficManagementType;
-    work_centre_point: string;
-    work_coordinates: string;
+    /** GeoJSON Point Geometry */
+    work_centre_point: GeoJSONCentrePoint;
     permit_status: PermitStatus;
 }

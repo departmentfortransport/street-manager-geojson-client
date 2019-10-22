@@ -1,11 +1,20 @@
 import { ForwardPlanStatus } from './referenceTypes'
+import { GeoJSONResponse, GeoJSONFeature, GeoJSONCentrePoint } from './geojsonTypes'
 
-export interface ForwardPlanResponse {
+export interface ForwardPlanResponse extends GeoJSONResponse {
+  features: ForwardPlanFeature[]
+}
+
+export interface ForwardPlanFeature extends GeoJSONFeature {
+  properties: ForwardPlanProperties
+}
+
+export interface ForwardPlanProperties {
   forward_plan_reference_number: string
   work_reference_number: string
   forward_plan_status: ForwardPlanStatus
-  work_centre_point: string // JSON string
-  work_coordinates: string // JSON string
+  /** GeoJSON Point Geometry */
+  work_centre_point: GeoJSONCentrePoint
   street: string
   area?: string
   start_date: Date

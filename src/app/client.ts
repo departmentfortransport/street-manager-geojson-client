@@ -25,28 +25,28 @@ export class StreetManagerGeoJSONClient {
     return this.httpHandler<void>(() => this.axios.get('/status'))
   }
 
-  public async getWorks(requestConfig: RequestConfig, getWorksRequest: GetWorksRequest): Promise<WorkResponse[]> {
+  public async getWorks(requestConfig: RequestConfig, getWorksRequest: GetWorksRequest): Promise<WorkResponse> {
     let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
 
     config.params = getWorksRequest
 
-    return this.httpHandler<WorkResponse[]>(() => this.axios.get(`/works`, config))
+    return this.httpHandler<WorkResponse>(() => this.axios.get(`/works`, config))
   }
 
-  public async getActivities(requestConfig: RequestConfig, getActivitiesRequest: GetActivitiesRequest): Promise<ActivityResponse[]> {
+  public async getActivities(requestConfig: RequestConfig, getActivitiesRequest: GetActivitiesRequest): Promise<ActivityResponse> {
     let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
 
     config.params = getActivitiesRequest
 
-    return this.httpHandler<ActivityResponse[]>(() => this.axios.get(`/activities`, config))
+    return this.httpHandler<ActivityResponse>(() => this.axios.get(`/activities`, config))
   }
 
-  public async getForwardPlans(requestConfig: RequestConfig, getForwardPlansRequest: GetForwardPlanRequest): Promise<ForwardPlanResponse[]> {
+  public async getForwardPlans(requestConfig: RequestConfig, getForwardPlansRequest: GetForwardPlanRequest): Promise<ForwardPlanResponse> {
     let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
 
     config.params = getForwardPlansRequest
 
-    return this.httpHandler<ForwardPlanResponse[]>(() => this.axios.get(`/forward-plans`, config))
+    return this.httpHandler<ForwardPlanResponse>(() => this.axios.get(`/forward-plans`, config))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
