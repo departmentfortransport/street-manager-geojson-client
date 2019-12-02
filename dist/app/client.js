@@ -43,6 +43,13 @@ class StreetManagerGeoJSONClient {
             return this.httpHandler(() => this.axios.get(`/forward-plans`, config));
         });
     }
+    getHs2ActLimits(requestConfig, getHs2ActLimitsRequest) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let config = this.generateRequestConfig(requestConfig);
+            config.params = getHs2ActLimitsRequest;
+            return this.httpHandler(() => this.axios.get(`/hs2-act-limits`, config));
+        });
+    }
     httpHandler(request) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

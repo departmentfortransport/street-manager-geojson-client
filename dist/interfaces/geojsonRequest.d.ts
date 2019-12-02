@@ -1,8 +1,5 @@
-export interface GeojsonRequest {
-    minEasting: number;
-    minNorthing: number;
-    maxEasting: number;
-    maxNorthing: number;
+import { BaseGeojsonRequest } from './baseGeojsonRequest';
+export interface GeojsonRequest extends BaseGeojsonRequest {
     start_date?: Date;
     end_date?: Date;
 }

@@ -6,6 +6,8 @@ import { RequestConfig } from '../interfaces/requestConfig'
 import { ActivityResponse } from '../interfaces/activitiesResponse'
 import { ForwardPlanResponse } from '../interfaces/forwardPlanResponse'
 import { GetForwardPlanRequest } from '../interfaces/getForwardPlanRequest'
+import { Hs2ActLimitsResponse } from '../interfaces/hs2ActLimitsResponse'
+import { GetHs2ActLimitsRequest } from '../interfaces/getHs2ActLimitsRequest'
 
 export interface StreetManagerGeoJSONClientConfig {
   baseURL: string,
@@ -47,6 +49,14 @@ export class StreetManagerGeoJSONClient {
     config.params = getForwardPlansRequest
 
     return this.httpHandler<ForwardPlanResponse>(() => this.axios.get(`/forward-plans`, config))
+  }
+
+  public async getHs2ActLimits(requestConfig: RequestConfig, getHs2ActLimitsRequest: GetHs2ActLimitsRequest): Promise<Hs2ActLimitsResponse> {
+    let config: AxiosRequestConfig = this.generateRequestConfig(requestConfig)
+
+    config.params = getHs2ActLimitsRequest
+
+    return this.httpHandler<Hs2ActLimitsResponse>(() => this.axios.get(`/hs2-act-limits`, config))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
