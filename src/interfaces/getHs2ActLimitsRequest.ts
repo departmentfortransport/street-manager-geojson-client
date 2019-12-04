@@ -1,3 +1,3 @@
 import { BaseGeojsonRequest } from './baseGeojsonRequest'
 
-export interface GetHs2ActLimitsRequest extends BaseGeojsonRequest { }
+export interface GetHs2ActLimitsRequest extends BaseGeojsonRequest {}
