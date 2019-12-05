@@ -24,28 +24,28 @@ class StreetManagerGeoJSONClient {
     }
     getWorks(requestConfig, getWorksRequest) {
         return __awaiter(this, void 0, void 0, function* () {
-            let config = this.generateRequestConfig(requestConfig);
+            const config = this.generateRequestConfig(requestConfig);
             config.params = getWorksRequest;
             return this.httpHandler(() => this.axios.get(`/works`, config));
         });
     }
     getActivities(requestConfig, getActivitiesRequest) {
         return __awaiter(this, void 0, void 0, function* () {
-            let config = this.generateRequestConfig(requestConfig);
+            const config = this.generateRequestConfig(requestConfig);
             config.params = getActivitiesRequest;
             return this.httpHandler(() => this.axios.get(`/activities`, config));
         });
     }
     getForwardPlans(requestConfig, getForwardPlansRequest) {
         return __awaiter(this, void 0, void 0, function* () {
-            let config = this.generateRequestConfig(requestConfig);
+            const config = this.generateRequestConfig(requestConfig);
             config.params = getForwardPlansRequest;
             return this.httpHandler(() => this.axios.get(`/forward-plans`, config));
         });
     }
     getHs2ActLimits(requestConfig, getHs2ActLimitsRequest) {
         return __awaiter(this, void 0, void 0, function* () {
-            let config = this.generateRequestConfig(requestConfig);
+            const config = this.generateRequestConfig(requestConfig);
             config.params = getHs2ActLimitsRequest;
             return this.httpHandler(() => this.axios.get(`/hs2-act-limits`, config));
         });
