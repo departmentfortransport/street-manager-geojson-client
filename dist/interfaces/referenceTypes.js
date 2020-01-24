@@ -52,3 +52,13 @@ var ForwardPlanStatus;
     ForwardPlanStatus["cancelled"] = "cancelled";
     ForwardPlanStatus["progressed"] = "progressed";
 })(ForwardPlanStatus = exports.ForwardPlanStatus || (exports.ForwardPlanStatus = {}));
+var Role;
+(function (Role) {
+    Role["Planner"] = "Planner";
+    Role["HighwayAuthority"] = "HighwayAuthority";
+    Role["Admin"] = "Admin";
+    Role["Contractor"] = "Contractor";
+    Role["API"] = "API";
+    Role["UI"] = "UI";
+    Role["DataExport"] = "DataExport";
+})(Role = exports.Role || (exports.Role = {}));

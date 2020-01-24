@@ -49,3 +49,13 @@ export enum ForwardPlanStatus {
   cancelled = 'cancelled',
   progressed = 'progressed'
 }
+
+export enum Role {
+  Planner = 'Planner',
+  HighwayAuthority = 'HighwayAuthority',
+  Admin = 'Admin',
+  Contractor = 'Contractor',
+  API = 'API',
+  UI = 'UI',
+  DataExport = 'DataExport'
+}
