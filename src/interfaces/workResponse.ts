@@ -1,4 +1,4 @@
-import { WorkCategory, TrafficManagementType, PermitStatus, } from './referenceTypes'
+import { WorkCategory, TrafficManagementType, PermitStatus } from './referenceTypes'
 import { GeoJSONResponse, GeoJSONFeature, GeoJSONCentrePoint } from './geojsonTypes'
 
 export interface WorkResponse extends GeoJSONResponse {

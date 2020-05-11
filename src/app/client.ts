@@ -61,7 +61,7 @@ export class StreetManagerGeoJSONClient {
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
     try {
-      let response: AxiosResponse<T> = await request()
+      const response: AxiosResponse<T> = await request()
       if (response.data) {
         return response.data
       }
@@ -74,7 +74,7 @@ export class StreetManagerGeoJSONClient {
   }
 
   private generateRequestConfig(config: RequestConfig): AxiosRequestConfig {
-    let headers = {}
+    const headers = {}
     if (config.token) {
       headers['token'] = config.token
     }
