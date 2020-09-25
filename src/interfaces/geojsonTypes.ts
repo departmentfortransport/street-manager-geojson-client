@@ -10,6 +10,13 @@ export enum GeoJSONCentrePointType {
   Point = 'Point'
 }
 
+export enum GeoJSONFeatureTypeResponse {
+  Point = 'Point',
+  LineString = 'LineString',
+  Polygon = 'Polygon',
+  upcoming_enum = 'upcoming_enum'
+}
+
 export interface GeoJSONResponse {
   type: FeatureCollectionType
 }
@@ -21,14 +28,8 @@ export interface GeoJSONFeature {
 }
 
 export interface GeoJSONGeometry {
-  type: GeoJSONFeatureType
+  type: GeoJSONFeatureTypeResponse
   coordinates: any[]
-}
-
-export enum GeoJSONFeatureType {
-  Point = 'Point',
-  LineString = 'LineString',
-  Polygon = 'Polygon'
 }
 
 export interface GeoJSONCentrePoint {

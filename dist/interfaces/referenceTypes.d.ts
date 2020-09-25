@@ -1,4 +1,4 @@
-export declare enum PermitStatus {
+export declare enum PermitStatusResponse {
     submitted = "submitted",
     granted = "granted",
     permit_modification_request = "permit_modification_request",
@@ -6,9 +6,10 @@ export declare enum PermitStatus {
     closed = "closed",
     cancelled = "cancelled",
     revoked = "revoked",
-    progressed = "progressed"
+    progressed = "progressed",
+    upcoming_enum = "upcoming_enum"
 }
-export declare enum TrafficManagementType {
+export declare enum TrafficManagementTypeResponse {
     road_closure = "road_closure",
     contra_flow = "contra_flow",
     lane_closure = "lane_closure",
@@ -19,17 +20,19 @@ export declare enum TrafficManagementType {
     priority_working = "priority_working",
     give_and_take = "give_and_take",
     some_carriageway_incursion = "some_carriageway_incursion",
-    no_carriageway_incursion = "no_carriageway_incursion"
+    no_carriageway_incursion = "no_carriageway_incursion",
+    upcoming_enum = "upcoming_enum"
 }
-export declare enum WorkCategory {
+export declare enum WorkCategoryResponse {
     minor = "minor",
     standard = "standard",
     major = "major",
     immediate_urgent = "immediate_urgent",
     immediate_emergency = "immediate_emergency",
-    paa = "paa"
+    paa = "paa",
+    upcoming_enum = "upcoming_enum"
 }
-export declare enum ActivityActivityType {
+export declare enum ActivityActivityTypeResponse {
     skips = "skips",
     scaffolding = "scaffolding",
     hoarding = "hoarding",
@@ -38,10 +41,12 @@ export declare enum ActivityActivityType {
     section50 = "section50",
     section58 = "section58",
     compound = "compound",
-    other = "other"
+    other = "other",
+    upcoming_enum = "upcoming_enum"
 }
-export declare enum ForwardPlanStatus {
+export declare enum ForwardPlanStatusResponse {
     raised = "raised",
     cancelled = "cancelled",
-    progressed = "progressed"
+    progressed = "progressed",
+    upcoming_enum = "upcoming_enum"
 }
