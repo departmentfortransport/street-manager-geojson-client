@@ -30,6 +30,7 @@ export declare enum WorkCategoryResponse {
     immediate_urgent = "immediate_urgent",
     immediate_emergency = "immediate_emergency",
     paa = "paa",
+    hs2_highway = "hs2_highway",
     upcoming_enum = "upcoming_enum"
 }
 export declare enum ActivityActivityTypeResponse {

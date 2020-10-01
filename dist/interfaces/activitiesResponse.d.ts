@@ -13,6 +13,7 @@ export interface ActivityProperties {
     activity_location_description: string;
     activity_reference_number: string;
     activity_type: ActivityActivityTypeResponse;
+    activity_type_string: string;
     area_name: string;
     cancelled: boolean;
     end_date: Date;
