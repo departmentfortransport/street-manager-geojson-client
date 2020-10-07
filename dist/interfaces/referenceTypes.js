@@ -35,6 +35,7 @@ var WorkCategoryResponse;
     WorkCategoryResponse["immediate_urgent"] = "immediate_urgent";
     WorkCategoryResponse["immediate_emergency"] = "immediate_emergency";
     WorkCategoryResponse["paa"] = "paa";
+    WorkCategoryResponse["hs2_highway"] = "hs2_highway";
     WorkCategoryResponse["upcoming_enum"] = "upcoming_enum";
 })(WorkCategoryResponse = exports.WorkCategoryResponse || (exports.WorkCategoryResponse = {}));
 var ActivityActivityTypeResponse;

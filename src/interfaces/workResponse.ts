@@ -15,10 +15,13 @@ export interface WorkProperties {
   promoter_organisation: string
   promoter_swa_code: string
   work_category: WorkCategoryResponse
+  work_category_string: string
   start_date: Date
   end_date: Date
   traffic_management_type: TrafficManagementTypeResponse
+  traffic_management_type_string: string
   /** GeoJSON Point Geometry */
   work_centre_point: GeoJSONCentrePoint
   permit_status: PermitStatusResponse
+  permit_status_string: string
 }

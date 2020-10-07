@@ -23,6 +23,7 @@ export interface GeoJSONFeature {
 }
 export interface GeoJSONGeometry {
     type: GeoJSONFeatureTypeResponse;
+    type_string: string;
     coordinates: any[];
 }
 export interface GeoJSONCentrePoint {
