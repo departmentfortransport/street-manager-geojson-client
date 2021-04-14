@@ -1,4 +1,4 @@
-import { ActivityActivityType } from './referenceTypes'
+import { ActivityActivityTypeResponse } from './referenceTypes'
 import { GeoJSONResponse, GeoJSONFeature, GeoJSONCentrePoint } from './geojsonTypes'
 
 export interface ActivityResponse extends GeoJSONResponse {
@@ -15,7 +15,8 @@ export interface ActivityProperties {
   activity_name: string
   activity_location_description: string
   activity_reference_number: string
-  activity_type: ActivityActivityType
+  activity_type: ActivityActivityTypeResponse
+  activity_type_string: string
   area_name: string
   cancelled: boolean
   end_date: Date

@@ -1,4 +1,4 @@
-import { ForwardPlanStatus } from './referenceTypes'
+import { ForwardPlanStatusResponse } from './referenceTypes'
 import { GeoJSONResponse, GeoJSONFeature, GeoJSONCentrePoint } from './geojsonTypes'
 
 export interface ForwardPlanResponse extends GeoJSONResponse {
@@ -12,7 +12,8 @@ export interface ForwardPlanFeature extends GeoJSONFeature {
 export interface ForwardPlanProperties {
   forward_plan_reference_number: string
   work_reference_number: string
-  forward_plan_status: ForwardPlanStatus
+  forward_plan_status: ForwardPlanStatusResponse
+  forward_plan_status_string: string
   /** GeoJSON Point Geometry */
   work_centre_point: GeoJSONCentrePoint
   street: string
