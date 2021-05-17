@@ -51,3 +51,7 @@ export declare enum ForwardPlanStatusResponse {
     progressed = "progressed",
     upcoming_enum = "upcoming_enum"
 }
+export declare enum Hs2ActLimitPhase {
+    phase_1 = "phase_1",
+    phase_2a = "phase_2a"
+}

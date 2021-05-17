@@ -58,3 +58,8 @@ var ForwardPlanStatusResponse;
     ForwardPlanStatusResponse["progressed"] = "progressed";
     ForwardPlanStatusResponse["upcoming_enum"] = "upcoming_enum";
 })(ForwardPlanStatusResponse = exports.ForwardPlanStatusResponse || (exports.ForwardPlanStatusResponse = {}));
+var Hs2ActLimitPhase;
+(function (Hs2ActLimitPhase) {
+    Hs2ActLimitPhase["phase_1"] = "phase_1";
+    Hs2ActLimitPhase["phase_2a"] = "phase_2a";
+})(Hs2ActLimitPhase = exports.Hs2ActLimitPhase || (exports.Hs2ActLimitPhase = {}));
