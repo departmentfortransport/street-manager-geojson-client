@@ -17,7 +17,7 @@ export interface ForwardPlanProperties {
   /** GeoJSON Point Geometry */
   work_centre_point: GeoJSONCentrePoint
   street: string
-  area?: string
+  area?: null | string
   start_date: Date
   end_date: Date
   description_of_work: string
